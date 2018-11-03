@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Release|Win32|G:\work\code\self_opencv\《OpenCV3编程入门》书本配套源代码\【OpenCV3版】《OpenCV3编程入门》书本配套源代码\【1】书本正篇程序源代码\【3】第三章\【15】利用imwrite生成透明png图像\|

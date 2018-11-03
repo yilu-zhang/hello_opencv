@@ -1,0 +1,5 @@
+﻿  16_LoadShowOutputImage.cpp
+16_LoadShowOutputImage.obj : error LNK2001: 无法解析的外部符号 "void __cdecl cv::imshow(class cv::String const &,class cv::_InputArray const &)" (?imshow@cv@@YAXAEBVString@1@AEBV_InputArray@1@@Z)
+16_LoadShowOutputImage.obj : error LNK2001: 无法解析的外部符号 "bool __cdecl cv::imwrite(class cv::String const &,class cv::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NAEBVString@1@AEBV_InputArray@1@AEBV?$vector@HV?$allocator@H@std@@@std@@@Z)
+16_LoadShowOutputImage.obj : error LNK2001: 无法解析的外部符号 "void __cdecl cv::addWeighted(class cv::_InputArray const &,double,class cv::_InputArray const &,double,double,class cv::_OutputArray const &,int)" (?addWeighted@cv@@YAXAEBV_InputArray@1@N0NNAEBV_OutputArray@1@H@Z)
+G:\work\code\self_opencv\opencv3_book_instance\chapter_three\img_input_display_output\x64\Release\16_图像的载入，显示和输出.exe : fatal error LNK1120: 3 个无法解析的外部命令
