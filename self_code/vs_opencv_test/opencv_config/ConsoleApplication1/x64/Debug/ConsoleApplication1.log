@@ -1,0 +1,4 @@
+﻿  opencv3_learn.cpp
+g:\work\code\self_opencv\vs_opencv_test1\opencv_config\consoleapplication1\opencv3_learn.cpp(201): warning C4244: “参数”: 从“std::size_t”转换到“float”，可能丢失数据
+  ConsoleApplication1.vcxproj -> G:\work\code\self_opencv\vs_opencv_test1\opencv_config\x64\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> G:\work\code\self_opencv\vs_opencv_test1\opencv_config\x64\Debug\ConsoleApplication1.pdb (Full PDB)
