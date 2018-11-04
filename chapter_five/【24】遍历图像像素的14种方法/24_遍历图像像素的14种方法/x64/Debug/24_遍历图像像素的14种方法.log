@@ -1,0 +1,4 @@
+﻿  24_14WaysToAccessPixel.cpp
+g:\work\code\self_opencv\hello_opncv\chapter_five\【24】遍历图像像素的14种方法\24_遍历图像像素的14种方法\24_14waystoaccesspixel.cpp(162): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  24_遍历图像像素的14种方法.vcxproj -> G:\work\code\self_opencv\hello_opncv\chapter_five\【24】遍历图像像素的14种方法\x64\Debug\24_遍历图像像素的14种方法.exe
+  24_遍历图像像素的14种方法.vcxproj -> G:\work\code\self_opencv\hello_opncv\chapter_five\【24】遍历图像像素的14种方法\x64\Debug\24_遍历图像像素的14种方法.pdb (Full PDB)

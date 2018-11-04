@@ -1,18 +1,26 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24_遍历图像像素的14种方法", "24_遍历图像像素的14种方法\24_遍历图像像素的14种方法.vcxproj", "{1479025A-45CE-4F49-B5C7-D1594E4CDE72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Debug|Win32.ActiveCfg = Debug|Win32
 		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Debug|Win32.Build.0 = Debug|Win32
+		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Debug|x64.ActiveCfg = Debug|x64
+		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Debug|x64.Build.0 = Debug|x64
 		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Release|Win32.ActiveCfg = Release|Win32
 		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Release|Win32.Build.0 = Release|Win32
+		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Release|x64.ActiveCfg = Release|x64
+		{1479025A-45CE-4F49-B5C7-D1594E4CDE72}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

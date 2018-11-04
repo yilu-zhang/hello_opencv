@@ -77,7 +77,7 @@ void colorReduce(Mat& inputImage, Mat& outputImage, int div)
 	//存取彩色图像像素
 	for(;it != itend;++it)  
 	{  
-		// ------------------------【开始处理每个像素】--------------------
+		// ------------------------【开始处理每个像素，默认为处理三通道图像】--------------------
 		(*it)[0] = (*it)[0]/div*div + div/2;  
 		(*it)[1] = (*it)[1]/div*div + div/2;  
 		(*it)[2] = (*it)[2]/div*div + div/2;  

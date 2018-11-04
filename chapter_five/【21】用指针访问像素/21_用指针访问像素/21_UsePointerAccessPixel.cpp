@@ -72,7 +72,7 @@ void colorReduce(Mat& inputImage, Mat& outputImage, int div)
 		for(int j = 0;j < colNumber;j++)   //列循环
 		{  	
 			// ---------【开始处理每个像素】-------------     
-			data[j] = data[j]/div*div + div/2;  
+			data[j] = data[j]/div*div + div/2;   // +div/2可以使最小值不至于为0 
 			// ----------【处理结束】---------------------
 		}  //行处理结束
 	}  
