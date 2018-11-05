@@ -6,7 +6,7 @@ using namespace std;
 void chapter1_test()
 {
 	// 初探opencv
-	Mat src_img = imread("5.jpg");
+	Mat src_img = imread("tan.jpg");
 	//Mat src_img = imread(argv[1],1);
 
 	Mat edge, gray_img;
@@ -213,7 +213,7 @@ void chapter4_test()
 
 	case 4:
 	{
-		Mat src = imread("1.jpg"),pro_src;
+		Mat src = imread("tan.jpg"),pro_src;
 		cvtColor(src, pro_src, COLOR_BGR2GRAY);
 		namedWindow("处理后图", 0);
 		imshow("处理后图", pro_src);
@@ -223,4 +223,38 @@ void chapter4_test()
 	default:
 		break;
 	}
+}
+
+void chapter5_test()
+{
+	Mat src_img = imread("me.jpg");  //jpg和JPG不区分大小写
+	Mat logo_img = imread("dota_logo.jpg");
+	if (!src_img.data || !logo_img.data)
+	{
+		printf("读取错误");
+	}
+
+	else
+	{
+		//方法一
+		Mat img_roi = src_img(Rect(src_img.cols/2, src_img.rows/2, logo_img.cols, logo_img.rows));
+
+		//方法二,注意range是先行后列
+		//Mat img_roi = src_img(Range(src_img.rows/ 2, src_img.rows / 2 + logo_img.rows),\
+			Range(src_img.cols / 2, src_img.cols / 2 + logo_img.cols));
+
+		//加载掩膜，掩膜必须是灰度图
+		Mat mask = imread("dota_logo.jpg", 0);
+
+		//注意这形式有点诡异
+		logo_img.copyTo(img_roi, mask);
+
+		namedWindow("ROI显示", 0);
+		imshow("ROI显示", src_img);
+
+		waitKey(0);
+
+	}
+
+
 }

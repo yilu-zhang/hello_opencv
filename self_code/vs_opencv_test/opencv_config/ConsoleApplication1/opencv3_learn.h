@@ -7,5 +7,6 @@
 
 void chapter1_test();
 void chapter4_test();
+void chapter5_test();
 
 #endif // !OPENCV3_CHAPTER_4

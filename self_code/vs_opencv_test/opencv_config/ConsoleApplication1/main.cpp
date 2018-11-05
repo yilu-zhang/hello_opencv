@@ -17,7 +17,8 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-	chapter4_test();
+	//chapter4_test();
+	chapter5_test();
 	
 	
 }
