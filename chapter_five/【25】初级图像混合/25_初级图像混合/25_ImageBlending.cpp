@@ -35,11 +35,14 @@ int main(   )
 	system("color 6F");
  
 	ShowHelpText();
+	ROI_LinearBlending();
+	//LinearBlending();
 
-	if(ROI_AddImage( )&& LinearBlending( )&&ROI_LinearBlending( ))
+	/*if(ROI_AddImage( )&& LinearBlending( )&&ROI_LinearBlending( ))
 	{
 		cout<<endl<<"\n运行成功，得出了需要的图像";
-	}
+
+	}*/
 
 	waitKey(0);
 	return 0;
@@ -111,6 +114,7 @@ bool  LinearBlending()
 
 	// 【2】进行图像混合加权操作
 	betaValue = ( 1.0 - alphaValue );
+	// gama相当于线性方程的常数项，经常取0
 	addWeighted( srcImage2, alphaValue, srcImage3, betaValue, 0.0, dstImage);
 
 	// 【3】显示原图窗口
@@ -144,7 +148,7 @@ bool  ROI_LinearBlending()
 	//imageROI= srcImage4(Range(250,250+logoImage.rows),Range(200,200+logoImage.cols));
 
 	//【3】将logo加到原图上
-	addWeighted(imageROI,0.5,logoImage,0.3,0.,imageROI);
+	addWeighted(imageROI,0.5,logoImage,0.5,0.,imageROI);
 
 	//【4】显示结果
 	imshow("<4>区域线性图像混合示例窗口",srcImage4);

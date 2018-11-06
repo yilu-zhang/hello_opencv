@@ -104,6 +104,9 @@ bool  MultiChannelBlending()
 	namedWindow(" <1>游戏原画+logo蓝色通道");
 	imshow(" <1>游戏原画+logo蓝色通道",srcImage);
 
+	namedWindow("<2>蓝色通道");
+	imshow("<2>蓝色通道", imageBlueChannel);
+
 
 	//=================【绿色通道部分】=================
 	//	描述：多通道混合-绿色分量部分
@@ -125,6 +128,7 @@ bool  MultiChannelBlending()
 	//【3】将原图的绿色通道的引用返回给imageBlueChannel，注意是引用，相当于两者等价，修改其中一个另一个跟着变
 	imageGreenChannel= channels.at(1);
 	//【4】将原图的绿色通道的（500,250）坐标处右下方的一块区域和logo图进行加权操作，将得到的混合结果存到imageGreenChannel中
+	//注意加权1.0和0.5，这里主要是为了突出绿色通道
 	addWeighted(imageGreenChannel(Rect(500,250,logoImage.cols,logoImage.rows)),1.0,
 		logoImage,0.5,0.,imageGreenChannel(Rect(500,250,logoImage.cols,logoImage.rows)));
 
@@ -135,6 +139,8 @@ bool  MultiChannelBlending()
 	namedWindow("<2>游戏原画+logo绿色通道");
 	imshow("<2>游戏原画+logo绿色通道",srcImage);
 
+	namedWindow("<2>绿色通道");
+	imshow("<2>绿色通道", imageGreenChannel);
 
 
 	//=================【红色通道部分】=================
@@ -166,6 +172,9 @@ bool  MultiChannelBlending()
 	//【6】显示效果图
 	namedWindow("<3>游戏原画+logo红色通道 ");
 	imshow("<3>游戏原画+logo红色通道 ",srcImage);
+
+	namedWindow("<2>红色通道");
+	imshow("<2>红色通道", imageRedChannel);
 
 	return true;
 }
