@@ -104,8 +104,8 @@ bool  MultiChannelBlending()
 	namedWindow(" <1>游戏原画+logo蓝色通道");
 	imshow(" <1>游戏原画+logo蓝色通道",srcImage);
 
-	namedWindow("<2>蓝色通道");
-	imshow("<2>蓝色通道", imageBlueChannel);
+	/*namedWindow("<2>蓝色通道");
+	imshow("<2>蓝色通道", imageBlueChannel);*/
 
 
 	//=================【绿色通道部分】=================
@@ -139,8 +139,8 @@ bool  MultiChannelBlending()
 	namedWindow("<2>游戏原画+logo绿色通道");
 	imshow("<2>游戏原画+logo绿色通道",srcImage);
 
-	namedWindow("<2>绿色通道");
-	imshow("<2>绿色通道", imageGreenChannel);
+	/*namedWindow("<2>绿色通道");
+	imshow("<2>绿色通道", imageGreenChannel);*/
 
 
 	//=================【红色通道部分】=================
@@ -163,8 +163,8 @@ bool  MultiChannelBlending()
 	//【3】将原图的红色通道引用返回给imageBlueChannel，注意是引用，相当于两者等价，修改其中一个另一个跟着变
 	imageRedChannel= channels.at(2);
 	//【4】将原图的红色通道的（500,250）坐标处右下方的一块区域和logo图进行加权操作，将得到的混合结果存到imageRedChannel中
-	addWeighted(imageRedChannel(Rect(500,250,logoImage.cols,logoImage.rows)),1.0,
-		logoImage,0.5,0.,imageRedChannel(Rect(500,250,logoImage.cols,logoImage.rows)));
+	addWeighted(imageRedChannel(Rect(500,250,logoImage.cols,logoImage.rows)),2,
+		logoImage,0.1,0.,imageRedChannel(Rect(500,250,logoImage.cols,logoImage.rows)));
 
 	//【5】将三个独立的单通道重新合并成一个三通道
 	merge(channels,srcImage);
@@ -173,8 +173,8 @@ bool  MultiChannelBlending()
 	namedWindow("<3>游戏原画+logo红色通道 ");
 	imshow("<3>游戏原画+logo红色通道 ",srcImage);
 
-	namedWindow("<2>红色通道");
-	imshow("<2>红色通道", imageRedChannel);
+	/*namedWindow("<2>红色通道");
+	imshow("<2>红色通道", imageRedChannel);*/
 
 	return true;
 }

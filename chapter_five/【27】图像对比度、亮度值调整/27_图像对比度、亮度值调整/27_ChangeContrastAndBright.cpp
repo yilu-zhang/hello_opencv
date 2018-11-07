@@ -108,7 +108,10 @@ static void ContrastAndBright(int, void *)
 		{
 			for( int c = 0; c < 3; c++ )
 			{
-				g_dstImage.at<Vec3b>(y,x)[c] = saturate_cast<uchar>( (g_nContrastValue*0.01)*( g_srcImage.at<Vec3b>(y,x)[c] ) + g_nBrightValue );
+				// g_nContrastValue变化，变化对比度，对比度相对于GBR每种颜色通道乘个系数，称为增益（gain）
+				//  g_nBrightValue变化，只是对每种颜色通道增大或减小一个值，即偏置（bias）
+				g_dstImage.at<Vec3b>(y,x)[c] = saturate_cast<uchar>( (g_nContrastValue*0.01)*\
+					( g_srcImage.at<Vec3b>(y,x)[c] ) + g_nBrightValue );
 			}
 		}
 	}
