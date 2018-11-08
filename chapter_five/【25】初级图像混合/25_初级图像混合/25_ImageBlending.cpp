@@ -35,7 +35,8 @@ int main(   )
 	system("color 6F");
  
 	ShowHelpText();
-	ROI_LinearBlending();
+	ROI_AddImage();
+	//ROI_LinearBlending();
 	//LinearBlending();
 
 	/*if(ROI_AddImage( )&& LinearBlending( )&&ROI_LinearBlending( ))
@@ -83,12 +84,16 @@ bool  ROI_AddImage()
 	// 【3】加载掩模（必须是灰度图）
 	Mat mask= imread("dota_logo.jpg",0);
 
-	//【4】将掩膜拷贝到ROI
+	//【4】将掩膜拷贝到ROI,imageROI = logoImage & mask
 	logoImage.copyTo(imageROI,mask);
 
 	// 【5】显示结果
 	namedWindow("<1>利用ROI实现图像叠加示例窗口");
 	imshow("<1>利用ROI实现图像叠加示例窗口",srcImage1);
+
+	//显示mask
+	namedWindow("mask");
+	imshow("mask", mask);
 
 	return true;
 }
