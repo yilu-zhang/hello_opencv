@@ -43,6 +43,11 @@ int main( )
 	//初始化
 	FileStorage fs2("test.yaml", FileStorage::READ);  
 
+	std::string name;
+	fs2["name"] >> name;
+
+	//name = fs2["name"];
+
 	// 第一种方法，对FileNode操作
 	int frameCount = (int)fs2["frameCount"];  
 
@@ -54,7 +59,7 @@ int main( )
 	fs2["cameraMatrix"] >> cameraMatrix2;  
 	fs2["distCoeffs"] >> distCoeffs2;  
 
-	cout << "frameCount: " << frameCount << endl  
+	cout <<"name:"<<name <<endl<< "frameCount: " << frameCount << endl  
 		<< "calibration date: " << date << endl  
 		<< "camera matrix: " << cameraMatrix2 << endl  
 		<< "distortion coeffs: " << distCoeffs2 << endl;  

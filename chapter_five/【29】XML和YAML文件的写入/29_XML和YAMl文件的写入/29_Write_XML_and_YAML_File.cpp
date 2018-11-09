@@ -39,15 +39,23 @@ int main( )
 
 	ShowHelpText();
 
-	//初始化
+	//初始化,如果文件夹没有此文件会自动新建
 	FileStorage fs("test.yaml", FileStorage::WRITE);  
 
 	//开始文件写入
-	fs << "frameCount" << 5;  
-	time_t rawtime; time(&rawtime);  
+	//fs << 156;错误输入
+	fs << "name" << "zhangyilu";
+	fs << "frameCount" << 5;  	
+
+	//获取当前时间
+	time_t rawtime; 
+	time(&rawtime);  
 	fs << "calibrationDate" << asctime(localtime(&rawtime));  
+
 	Mat cameraMatrix = (Mat_<double>(3,3) << 1000, 0, 320, 0, 1000, 240, 0, 0, 1);  
 	Mat distCoeffs = (Mat_<double>(5,1) << 0.1, 0.01, -0.001, 0, 0);  
+	//print(cameraMatrix);
+	//print(distCoeffs);
 	fs << "cameraMatrix" << cameraMatrix << "distCoeffs" << distCoeffs;  
 	fs << "features" << "[";  
 	for( int i = 0; i < 3; i++ )  

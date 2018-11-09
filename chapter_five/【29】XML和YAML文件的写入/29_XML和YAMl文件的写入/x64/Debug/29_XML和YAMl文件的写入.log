@@ -1,0 +1,5 @@
+﻿  29_Write_XML_and_YAML_File.cpp
+g:\work\code\self_opencv\hello_opncv\chapter_five\【29】xml和yaml文件的写入\29_xml和yaml文件的写入\29_write_xml_and_yaml_file.cpp(52): warning C4996: 'asctime': This function or variable may be unsafe. Consider using asctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(116): note: 参见“asctime”的声明
+  29_XML和YAMl文件的写入.vcxproj -> G:\work\code\self_opencv\hello_opncv\chapter_five\【29】XML和YAML文件的写入\x64\Debug\29_XML和YAMl文件的写入.exe
+  29_XML和YAMl文件的写入.vcxproj -> G:\work\code\self_opencv\hello_opncv\chapter_five\【29】XML和YAML文件的写入\x64\Debug\29_XML和YAMl文件的写入.pdb (Full PDB)
